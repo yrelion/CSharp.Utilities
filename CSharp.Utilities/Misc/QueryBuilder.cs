@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
-namespace CSharp.Utilities
+namespace CSharp.Utilities.Misc
 {
     public static class QueryBuilder
     {

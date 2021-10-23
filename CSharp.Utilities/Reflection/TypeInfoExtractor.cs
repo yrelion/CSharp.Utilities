@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
 
-namespace CSharp.Utilities
+namespace CSharp.Utilities.Reflection
 {
     public static class TypeInfoExtractor
     {
@@ -20,7 +19,7 @@ namespace CSharp.Utilities
             TypeInfo attributesTypeInfo = typeof(TAttribute).GetTypeInfo();
 
             var attributedProperties = objectTypeInfo.GetProperties()
-                .Where(x => x.GetCustomAttributes().Any(a => a.GetType().Name == attributesTypeInfo.Name));
+                .Where(x => CustomAttributeExtensions.GetCustomAttributes((MemberInfo) x).Any(a => a.GetType().Name == attributesTypeInfo.Name));
 
             return attributedProperties;
         }

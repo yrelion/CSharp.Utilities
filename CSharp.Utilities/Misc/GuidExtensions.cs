@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace CSharp.Utilities.Extensions
+namespace CSharp.Utilities.Misc
 {
     public static class GuidExtensions
     {
